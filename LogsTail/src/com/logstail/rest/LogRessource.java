@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.io.Reader;
 import java.nio.charset.Charset;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
@@ -94,6 +95,7 @@ public class LogRessource extends BasePluginResource  {
 			e.printStackTrace();
 		}
 
+		Collections.reverse(res);
 		return new ListResult(res, res.size());
 	}
 	

@@ -13,7 +13,8 @@
 .logContainer {
 	overflow: scroll;
 	height: 700px;
-	display: inline-block
+	display: inline-block;
+	width: 100%;
 }
 
 .logTree {
