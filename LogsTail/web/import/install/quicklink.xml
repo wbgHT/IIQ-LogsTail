@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE sailpoint PUBLIC "sailpoint.dtd" "sailpoint.dtd">
+
+<sailpoint>
+	<!-- 
+  <ImportAction name="merge">
+    <Configuration name="SystemConfiguration">
+      <Attributes>
+        <Map>
+          <entry key='quickLinkCategories'>
+            <value>
+              <List>
+                <QuickLinkCategory messageKey="LogsTail Plugin" enabled="true" name="LogsTail"/>
+              </List>
+            </value>
+          </entry>
+        </Map>
+      </Attributes>
+    </Configuration>
+  </ImportAction>
+
+  <QuickLink action="external" category="LogsTail" messageKey="LogsTail" name="ViewLogsTail" ordering="4">
+    <Attributes>
+      <Map>
+        <entry key="url" value="plugins/pluginPage.jsf?pn=LogsTail"/>
+      </Map>
+    </Attributes>
+    <QuickLinkOptions allowSelf="true">
+      <DynamicScopeRef>
+        <Reference class="sailpoint.object.DynamicScope" name="Everyone"/>
+      </DynamicScopeRef>
+    </QuickLinkOptions>
+  </QuickLink>
+  
+  -->
+
+</sailpoint>
+

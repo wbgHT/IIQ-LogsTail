@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE Plugin PUBLIC "sailpoint.dtd" "sailpoint.dtd">
+<Plugin displayName="LogsTail" minSystemVersion="8.1" name="LogsTail" version="1.0" certificationLevel="None" rightRequired="LogTailsPluginRight">
+	<Attributes>
+		<Map>
+			<entry key="minUpgradableVersion" value="1.0" />
+			<entry key="fullPage">
+				<value>
+					<FullPage title="LogsTail Plugin" />
+				</value>
+			</entry>
+			<entry key="restResources">
+				<value>
+					<List>
+						<String>com.logstail.rest.LogRessource</String>
+					</List>
+				</value>
+			</entry>
+			<entry key="serviceExecutors">
+				<value>
+					<List>
+					</List>
+				</value>
+			</entry>
+			<entry key="settings">
+				<value>
+					<List>
+						<Setting dataType="string"
+							helpText="Log4j file"
+							label="Log4j file" name="LOG4J_FILE"
+							defaultValue="/opt/apache-tomcat-9.0.53/webapps/ROOT//WEB-INF/classes/log4j2.properties" />
+					</List>
+				</value>
+			</entry>
+			
+			<entry key="snippets">
+				<value>
+					<List>
+						<Snippet regexPattern=".*" rightRequired="LogTailsPluginRight">
+							<Scripts>
+								<String>ui/js/headerInject.js</String>
+								<String>/ui/libs/highlight/highlight.min.js</String>
+								<String>/ui/libs/jstree/jstree.min.js</String>
+								<String>/ui/libs/mark/mark.min.js</String>
+							</Scripts>
+							<StyleSheets>
+								<String>/ui/css/style.css</String>
+								<String>/ui/libs/highlight/default.min.css</String>
+								<String>/ui/libs/jstree/style.min.css</String>
+							</StyleSheets>
+						</Snippet>
+						<!-- 
+						<Snippet regexPattern=".*/systemSetup/index\..*" rightRequired="LogTailsPluginRight">
+							<Scripts>
+								<String>ui/js/headerInjectGlobalSettings.js</String>
+							</Scripts>
+						</Snippet>
+						-->
+					</List>
+				</value>
+			</entry>
+		</Map>
+	</Attributes>
+</Plugin>

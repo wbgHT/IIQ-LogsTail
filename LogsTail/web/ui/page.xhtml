@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC
+  "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+      
+<body>
+<ui:composition>
+	<link rel="stylesheet" href="#{plugins.requestContextPath}/plugin/LogsTail/ui/libs/highlight/default.min.css" />
+	<link rel="stylesheet" href="#{plugins.requestContextPath}/plugin/LogsTail/ui/libs/jstree/style.min.css" />
+	
+    <script src="#{plugins.requestContextPath}/ui/js/bundles/SailPointBundleLibrary.js"></script>
+    <script src="#{plugins.requestContextPath}/plugin/LogsTail/ui/libs/highlight/highlight.min.js"></script>
+    <script src="#{plugins.requestContextPath}/plugin/LogsTail/ui/libs/mark/mark.min.js"></script>
+    <script src="#{plugins.requestContextPath}/plugin/LogsTail/ui/libs/jstree/jstree.min.js"></script>
+    <script src="#{plugins.requestContextPath}/plugin/LogsTail/ui/js/LogsTailModule.js"></script>
+    
+    <div id="logsTailContainer" class="container" ng-app="LogsTail" ng-controller="LogsTailController as ctrl">
+    	<div class="secondContainer">
+    		<div id="loader" class="loader03"></div>
+    		<input type="text" name="keyword" class="form-control input-sm" placeholder="Keyword..." />
+    		<div>
+    			<input type="checkbox" id="regexp" name="regexp" />
+    			<label for="regexp">RegExp</label>
+   			</div>
+		    <select id="intervalCombobox" name="intervalCombobox" class="intervalCombobox">
+			  <option value="0">-</option>
+			  <option value="1">1s</option>
+			  <option value="5">5s</option>
+			  <option value="10">10s</option>
+			  <option value="30">30s</option>
+			  <option value="60">60s</option>
+			  <option value="300">5mn</option>
+			</select>
+			<select id="linesCombobox" name="linesCombobox" class="linesCombobox">
+			  <option value="10">10</option>
+			  <option value="100">100</option>
+			  <option value="500">500</option>
+			  <option value="1000">1000</option>
+			  <option value="1500">1500</option>
+			  <option value="2000">2000</option>
+			  <option value="3000">3000</option>
+			</select>
+		    <div id="logsFilesTree" class="logTree"></div>
+	    </div>
+	    <pre><code id="logsData" class="context logContainer"></code></pre>
+    </div>
+</ui:composition>
+
+</body>
+</html>
+
