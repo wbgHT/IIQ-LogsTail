@@ -5,9 +5,8 @@
 }
 
 .secondContainer {
-	width: 10%;
-  	float: right;
-  	padding-left: 10px;
+  	float: left;
+  	padding-right: 10px;
 }
 
 .logContainer {
