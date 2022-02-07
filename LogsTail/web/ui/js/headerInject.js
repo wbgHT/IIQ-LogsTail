@@ -20,7 +20,7 @@ var authRequirements = null;
 var lastTimeStamp = null;
 
 
-function go() {
+function goLogsTail() {
 	window.location = SailPoint.CONTEXT_PATH + "/plugins/pluginPage.jsf?pn=LogsTail";	
 }
 
@@ -28,8 +28,8 @@ function go() {
 jQuery(document).ready(function(){
 	
 	var menuItem = 	'<li class="dropdown">' +
-		'	<a href="javascript:go()" tabindex="0" role="menuitem" data-snippet-debug="off">' +
-		'		<i id="logsTailPluginIcon" role="presenation" class="fa fa-file-text fa-lg ' + statusClass + '"></i>' +
+		'	<a href="javascript:goLogsTail()" tabindex="0" role="menuitem" data-snippet-debug="off">' +
+		'		<i id="LogsTailPluginIcon" role="presenation" class="fa fa-file-text fa-lg ' + statusClass + '"></i>' +
 		'	</a>' +
 		'</li>';
 

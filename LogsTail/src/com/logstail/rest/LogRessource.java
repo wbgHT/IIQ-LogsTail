@@ -21,7 +21,7 @@ import sailpoint.tools.GeneralException;
 import org.apache.commons.io.input.ReversedLinesFileReader;
 
 
-@Path("logstail")
+@Path("LogsTail")
 @Produces({"application/json"})
 public class LogRessource extends BasePluginResource  {
 

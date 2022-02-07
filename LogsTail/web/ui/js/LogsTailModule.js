@@ -157,7 +157,7 @@ logsTailModule.service('LogsTailService', function($http) {
 		 * Get log file data
 		 */ 
         getLogs: function(filePath, lines) {
-            var LOGSTAIL_URL = PluginHelper.getPluginRestUrl('logstail/logs');
+            var LOGSTAIL_URL = PluginHelper.getPluginRestUrl('LogsTail/logs');
 
             return $http.get(LOGSTAIL_URL, 
             			{ params: { 
@@ -174,7 +174,7 @@ logsTailModule.service('LogsTailService', function($http) {
          * Get log files
          */
         getLogFiles: function() {
-			var LOGSTAIL_URL = PluginHelper.getPluginRestUrl('logstail/logfiles');
+			var LOGSTAIL_URL = PluginHelper.getPluginRestUrl('LogsTail/logfiles');
 
             return $http.get(LOGSTAIL_URL)
             	.then(function(response) {
