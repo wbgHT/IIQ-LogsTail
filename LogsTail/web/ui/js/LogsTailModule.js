@@ -93,7 +93,11 @@ logsTailModule.controller('LogsTailController', function(LogsTailService, $q, $u
 	      done: function() {
 			regexp
 			if($('#regexp').is(':checked')) {
-				instance.markRegExp(keyword, options);
+				// Create regex
+			    var flags = keyword.replace(/.*\/([gimy]*)$/, '$1');
+			    var pattern = keyword.replace(new RegExp('^/(.*?)/' + flags + '$'), '$1');
+			    var regex = new RegExp(pattern, flags);
+				instance.markRegExp(regex, options);
 			} else {
 				instance.mark(keyword, options);	
 			}
