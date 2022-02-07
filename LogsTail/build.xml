@@ -34,18 +34,18 @@
 
   <target name="overlay" depends="compile" description="Output zip file overlay to build/dist dir">
     <mkdir dir="${overlay}/jars"/>
-    <jar destfile="${overlay}/jars/TailLogs.jar" basedir="build/classes">
+    <jar destfile="${overlay}/jars/LogsTail.jar" basedir="build/classes">
       <fileset dir="build/classes">
         <include name="sailpoint/plugin/**"/>
         <include name="sailpoint/web/**"/>
       </fileset>
     </jar>
   	<copy todir="${overlay}/lib">
-  	     <fileset file="${overlay}/jars/TailLogs.jar"/>
+  	     <fileset file="${overlay}/jars/LogsTail.jar"/>
     </copy>
     <copy todir="${overlay}">
       <fileset dir="web"/>
     </copy>
-    <zip basedir="${overlay}" destfile="build/dist/TailLogs.${version}.zip"/>
+    <zip basedir="${overlay}" destfile="build/dist/LogsTail.${version}.zip"/>
   </target>
 </project>

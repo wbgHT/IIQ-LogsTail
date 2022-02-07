@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!DOCTYPE Plugin PUBLIC "sailpoint.dtd" "sailpoint.dtd">
-<Plugin displayName="LogsTail" minSystemVersion="8.1" name="LogsTail" version="1.0" certificationLevel="None" rightRequired="LogTailsPluginRight">
+<Plugin displayName="LogsTail" minSystemVersion="8.1" name="LogsTail" version="1.0" certificationLevel="None" rightRequired="LogsTailPluginRight">
 	<Attributes>
 		<Map>
 			<entry key="minUpgradableVersion" value="1.0" />
@@ -36,7 +36,7 @@
 			<entry key="snippets">
 				<value>
 					<List>
-						<Snippet regexPattern=".*" rightRequired="LogTailsPluginRight">
+						<Snippet regexPattern=".*" rightRequired="LogsTailPluginRight">
 							<Scripts>
 								<String>ui/js/headerInject.js</String>
 								<String>/ui/libs/highlight/highlight.min.js</String>
@@ -50,7 +50,7 @@
 							</StyleSheets>
 						</Snippet>
 						<!-- 
-						<Snippet regexPattern=".*/systemSetup/index\..*" rightRequired="LogTailsPluginRight">
+						<Snippet regexPattern=".*/systemSetup/index\..*" rightRequired="LogsTailPluginRight">
 							<Scripts>
 								<String>ui/js/headerInjectGlobalSettings.js</String>
 							</Scripts>
