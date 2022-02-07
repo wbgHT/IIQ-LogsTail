@@ -53,7 +53,7 @@ public class LogRessource extends BasePluginResource  {
 				BufferedReader br = new BufferedReader(reader);
 				String line = "";
 		        while((line = br.readLine()) != null) {
-		        	if(line.contains(pattern)) {
+		        	if(line.contains(pattern) && !line.startsWith("#")) {
 		        		String fileName = line.split(pattern)[1];
 		        		res.add(fileName);
 		        	}

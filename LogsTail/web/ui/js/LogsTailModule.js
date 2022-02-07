@@ -20,15 +20,17 @@ function loadLogFile(LogsTailService, file, nlines) {
 	var logsRes = LogsTailService.getLogs(file, nlines);
 	
 	logsRes.then(function(logsData) {
-		var logs = "";
-		
-		logsData.forEach(function(log) {
-			logs += log + "\n";
-		});
-		
-		var resultDiv = document.getElementById('logsData');
-		if (resultDiv != null) {
-			resultDiv.innerHTML = hljs.highlight(logs, {language: 'accesslog'}).value;
+		if(logsData) {
+			var logs = "";
+			
+			logsData.forEach(function(log) {
+				logs += log + "\n";
+			});
+			
+			var resultDiv = document.getElementById('logsData');
+			if (resultDiv != null) {
+				resultDiv.innerHTML = hljs.highlight(logs, {language: 'accesslog'}).value;
+			}
 		}
 		$('#loader').hide();
 	});
