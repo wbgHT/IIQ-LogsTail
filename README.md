@@ -12,6 +12,8 @@ LogsTail is an IdentityIQ plugin that allows viewing logs files of a single serv
 
 ## Usage
 
+In order to have access to LogsTail plugin, you need to have the capability "LogsTailPluginCapability".
+
 Click on the file upper right icon screen
 
 ![LogsTail](Doc/LogsTailPlugin.png)
