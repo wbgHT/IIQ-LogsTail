@@ -25,10 +25,27 @@ import org.apache.commons.io.input.ReversedLinesFileReader;
 @Produces({"application/json"})
 public class LogRessource extends BasePluginResource  {
 
+	private static String catalinaBase = System.getProperty("catalina.base");
+			
     @Override  
     public String getPluginName() {  
         return "LogsTail";
     }  
+    
+    /**
+     * Process env vars if present in file name
+     * @param fileName
+     * @return
+     */
+    private String eval(String fileName) {
+    	if(fileName.contains("${sys:catalina.base}")) {
+    		fileName = fileName.replace("${sys:catalina.base}", catalinaBase);
+    	}
+    	if(fileName.contains("${catalina.base}")) {
+    		fileName = fileName.replace("${catalina.base}", catalinaBase);
+    	}
+    	return fileName;
+    }
     
     /**
      * Get log files from log4j2.properties
@@ -55,7 +72,7 @@ public class LogRessource extends BasePluginResource  {
 		        while((line = br.readLine()) != null) {
 		        	if(line.contains(pattern) && !line.startsWith("#")) {
 		        		String fileName = line.split(pattern)[1];
-		        		res.add(fileName);
+		        		res.add(this.eval(fileName));
 		        	}
 		        }
 		        br.close();
